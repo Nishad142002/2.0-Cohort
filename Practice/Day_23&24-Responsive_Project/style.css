@@ -1,0 +1,308 @@
+@font-face {
+  font-family: Roboto;
+  src: url(./font/BfR8bXMIjhLq38.woff2);
+}
+@font-face {
+  font-family: Chillax;
+  src: url(./font/Chillax-Regular.woff);
+}
+@font-face {
+  font-family: Satoshi;
+  src: url(./font/Satoshi-Light.woff);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  color: #F4F2ED;
+}
+
+body {
+  background-color: #121212;
+}
+
+section {
+  max-width: 2000px;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  align-items: center;
+}
+main section.view1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+main section.view1 .top {
+  width: 100%;
+}
+main section.view1 .top img {
+  width: 100%;
+  border-radius: 10px;
+}
+main section.view1 .bottom {
+  background-color: #1E1E1E;
+  padding: 1.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  border-radius: 10px;
+}
+main section.view1 .bottom p {
+  font-family: Roboto;
+}
+main section.view1 .bottom .text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+main section.view1 .bottom .text h1 {
+  font-family: Chillax;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 2.3rem;
+  line-height: 2.6rem;
+}
+main section.view1 .bottom .text p {
+  color: rgba(244, 242, 237, 0.6);
+  font-size: 1.25rem;
+  font-family: Satoshi;
+  line-height: 2rem;
+  font-weight: 400;
+  word-spacing: 0.3rem;
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+main section.view1 .bottom .text button {
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: rgba(255, 255, 255, 0.0509803922);
+  border: none;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.3254901961);
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+main section.view1 .bottom .text button i {
+  font-size: 1.3rem;
+  color: rgba(244, 242, 237, 0.5843137255);
+  font-weight: 100;
+}
+main section.view1 .bottom .text p span {
+  font-family: Roboto;
+  color: #F4F2ED;
+  font-size: 1rem;
+}
+main section.view2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+}
+main section.view2 .top, main section.view2 .bottom {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+main section.view2 .top .element, main section.view2 .bottom .element {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+main section.view2 .top .element small, main section.view2 .bottom .element small {
+  font-family: Roboto;
+  color: rgba(244, 242, 237, 0.6);
+  font-size: 1rem;
+  font-weight: 300;
+}
+main section.view2 .top .element h2, main section.view2 .bottom .element h2 {
+  font-family: Chillax;
+  font-size: 2.25rem;
+  font-weight: 100;
+}
+main section.view3 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+}
+main section.view3 .top {
+  width: 100%;
+}
+main section.view3 .top img {
+  width: 100%;
+  border-radius: 0.7rem;
+}
+main section.view3 .bottom {
+  background-color: #1E1E1E;
+  border-radius: 0.7rem;
+  padding: 1.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+main section.view3 .bottom .text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+main section.view3 .bottom .text h1 {
+  font-weight: 200;
+  font-family: Chillax;
+  text-transform: uppercase;
+  font-size: 1.9rem;
+  line-height: 2.3rem;
+}
+main section.view3 .bottom .text p {
+  color: rgba(244, 242, 237, 0.6);
+  font-family: Satoshi;
+  font-size: 1.1rem;
+  font-weight: 550;
+  line-height: 1.7rem;
+}
+main section.view3 .bottom > p {
+  font-family: Roboto;
+  text-transform: uppercase;
+}
+main section.view4 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+main section.view4 .card {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-size: cover;
+  border-radius: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  justify-content: space-between;
+  padding: 1rem;
+}
+main section.view4 .card .top {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  padding: 0.7rem;
+}
+main section.view4 .card .top .icon {
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 50%;
+}
+main section.view4 .card .top .icon i {
+  font-size: 1.1rem;
+  font-family: Satoshi;
+  font-weight: 100;
+  color: #F4F2ED;
+}
+main section.view4 .card .icon, main section.view4 .card .bottom {
+  -webkit-backdrop-filter: blur(2rem);
+          backdrop-filter: blur(2rem);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.2rem;
+  padding: 0.7rem;
+}
+main section.view4 .card .bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+main section.view4 .card .bottom p {
+  text-transform: uppercase;
+}
+main section.view4 .card .bottom p:nth-child(1) {
+  font-family: Chillax;
+  font-size: 1.3rem;
+}
+main section.view4 .card .bottom p:nth-child(2) {
+  font-family: Roboto;
+  font-weight: 400;
+}
+main section.view4 .card:nth-child(1) {
+  background-image: url(./photo/profile1.webp);
+}
+main section.view4 .card:nth-child(2) {
+  background-image: url(./photo/profile2.webp);
+}
+main section.view4 .card:nth-child(3) {
+  background-image: url(./photo/profile3.webp);
+}
+
+@media (min-width: 1000px) {
+  main section.view1 {
+    flex-direction: row;
+  }
+  main section.view1 .top, main section.view1 .bottom {
+    width: 50%;
+  }
+  main section.view1 .bottom {
+    justify-content: space-between;
+    padding: 4rem;
+  }
+  main section.view1 .bottom .text h1 {
+    font-size: 4rem;
+    line-height: 4.7rem;
+  }
+  main section.view1 .bottom .text p {
+    width: 85%;
+  }
+  main section.view2 {
+    flex-direction: row;
+  }
+  main section.view2 .top .element small, main section.view2 .bottom .element small {
+    font-size: 1rem;
+  }
+  main section.view2 .top .element h2, main section.view2 .bottom .element h2 {
+    font-size: 4rem;
+  }
+  main section.view3 {
+    flex-direction: row-reverse;
+  }
+  main section.view3 .top, main section.view3 .bottom {
+    width: 50%;
+  }
+  main section.view3 .bottom {
+    justify-content: space-between;
+    padding: 4rem;
+  }
+  main section.view3 .bottom .text h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+  main section.view3 .bottom .text .paragraphs {
+    display: flex;
+    gap: 2rem;
+  }
+  main section.view3 .bottom .text .paragraphs p {
+    width: 45%;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.7rem;
+  }
+  main section.view4 {
+    flex-direction: row;
+  }
+}/*# sourceMappingURL=style.css.map */
