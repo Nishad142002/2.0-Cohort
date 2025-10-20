@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+#main1 {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 70px 1fr 1fr;
+
+  grid-template-areas:
+    "header header header"
+    "section section section"
+    "div1 div2 div3";
+
+  grid-gap: 20px;
+  padding: 10px;
+}
+
+#main1 > header {
+  background-color: crimson;
+  grid-area: header;
+  border-radius: 20px;
+}
+
+#main1 > section {
+  background-color: aqua;
+  grid-area: section;
+  border-radius: 20px;
+}
+
+#div1 {
+  background-color: blueviolet;
+  grid-area: div1;
+}
+#div2 {
+  background-color: blue;
+  grid-area: div2;
+}
+#div3 {
+  background-color: brown;
+  grid-area: div3;
+}
+
+/* Grid 2 */
+#main2 {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 70px 1fr 0.5fr 0.5fr;
+
+  grid-template-areas:
+    "head head head"
+    "sec sec sec"
+    "div-left bottom-up div-right"
+    "div-left bottom-down div-right";
+
+  grid-gap: 10px;
+  padding: 15px;
+}
+
+#head {
+  background-color: darkred;
+  grid-area: head;
+}
+#sec {
+  background-color: cadetblue;
+  grid-area: sec;
+}
+#div-left {
+  background-color: chartreuse;
+  grid-area: div-left;
+}
+#bottom-up {
+  background-color: rgb(68, 40, 3);
+  grid-area: bottom-up;
+}
+#bottom-down {
+  background-color: rgb(154, 89, 4);
+  grid-area: bottom-down;
+}
+#div-right {
+  background-color: darkblue;
+  grid-area: div-right;
+}
+
+/* Grid 2 */
+
+#main3 {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+
+  grid-template-columns: 1fr 0.6fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+
+  grid-template-areas:
+    "left-top top-center top-right"
+    "left-top center bottom-right"
+    "left-bottom left-bottom bottom-right";
+
+  gap: 20px;
+  padding: 40px;
+}
+
+#main3 > div {
+  border-radius: 20px;
+  text-align: center;
+}
+
+#left-top {
+  background-color: rgb(123, 123, 244);
+  grid-area: left-top;
+}
+
+#left-bottom {
+  background-color: saddlebrown;
+  grid-area: left-bottom;
+}
+
+#bottom-right {
+  background-color: yellowgreen;
+  grid-area: bottom-right;
+}
+
+#center {
+  background-color: violet;
+  grid-area: center;
+}
+
+#top-center {
+  background-color: tomato;
+  grid-area: top-center;
+}
+
+#top-right {
+  background-color: teal;
+  grid-area: top-right;
+}
