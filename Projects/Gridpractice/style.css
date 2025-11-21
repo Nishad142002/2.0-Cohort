@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: black;
+}
+
+main .grid1 {
+  width: 24%;
+  height: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.grid1 .box {
+  background-image: url(./Kratos.jpeg);
+  background-size: contain;
+  background-position: center center;
+
+  background-attachment: fixed;
+}
+
+.grid1 .box1 {
+  background-color: red;
+  border-radius: 50%;
+}
+.grid1 .box2 {
+  background-color: crimson;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+.grid1 .box3 {
+  background-color: yellow;
+  border-bottom-right-radius: 100%;
+}
+.grid1 .box4 {
+  background-color: green;
+}
+.grid1 .box5 {
+  background-color: gray;
+  border-bottom-right-radius: 100%;
+}
+.grid1 .box6 {
+  background-color: cyan;
+  border-top-right-radius: 100%;
+}
+.grid1 .box7 {
+  background-color: blue;
+  border-top-left-radius: 100%;
+}
+.grid1 .box8 {
+  background-color: blue;
+  border-top-left-radius: 100%;
+}
+
+main .grid2 {
+  width: 450px;
+  height: 600px;
+  display: grid;
+  background-color: pink;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+
+  grid-template-areas:
+    "box1 box2 box3"
+    "box1 box4 box5"
+    "box6 box6 box5"
+    "box7 box8 box9";
+  gap: 6px;
+}
+
+main .grid2 .boxImg2 {
+  background-image: url(./nature1.jpeg);
+  background-size: 450px 600px;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.grid2 .box1 {
+  grid-area: box1;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+}
+.grid2 .box2 {
+  background-color: yellow;
+  grid-area: box2;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+.grid2 .box3 {
+  background-color: green;
+  grid-area: box3;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+.grid2 .box4 {
+  background-color: gray;
+  grid-area: box4;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.grid2 .box5 {
+  background-color: goldenrod;
+  grid-area: box5;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+.grid2 .box6 {
+  background-color: crimson;
+  grid-area: box6;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
+.grid2 .box7 {
+  background-color: chartreuse;
+  grid-area: box7;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.grid2 .box8 {
+  background-color: palegreen;
+  grid-area: box8;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.grid2 .box9 {
+  background-color: palevioletred;
+  grid-area: box9;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
