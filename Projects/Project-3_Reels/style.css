@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  height: 100%;
+  height: 100%;
+  padding: 20px;
+  background: linear-gradient(to right bottom, #111, #333);
+}
+
+section {
+  height: 100%;
+  max-width: 490px;
+  min-width: 290px;
+  margin: auto;
+  border-radius: 15px;
+}
+
+section .all-reels {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.all-reels::-webkit-scrollbar {
+  display: none;
+}
+
+.all-reels .reel {
+  width: 85%;
+  height: 100%;
+  position: relative;
+  border-radius: 15px;
+  color: #fff;
+  margin-bottom: 15px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.reel .main-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.reel .bottom {
+  width: 100%;
+  padding: 30px 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.758));
+  position: absolute;
+  bottom: 0;
+  border-radius: 15px;
+  color: #fff;
+}
+
+.bottom .user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.bottom .user h4 {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.bottom .user button {
+  color: #fff;
+  background-color: transparent;
+  padding: 2px 4px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  outline: none;
+}
+
+.bottom img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #666;
+}
+
+.bottom > h3 {
+  font-weight: 500;
+  font-size: 18px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.reel .right {
+  width: 40px;
+  position: absolute;
+  text-align: center;
+  align-items: center;
+  right: 0;
+  bottom: 0;
+  transform: translateX(130%);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.right .icon {
+  font-size: 28px;
+  font-weight: 100;
+  background-color: #444;
+  border-radius: 50%;
+  padding: 8px;
+  transition: all ease 0.3s;
+  cursor: pointer;
+}
+
+.right .icon:hover {
+  background-color: #555;
+}
+
+.right h6 {
+  font-size: 15px;
+  font-weight: 100;
+  line-height: 22px;
+}
+
+.liked {
+  color: red;
+}
+
+@media (max-width: 450px) {
+  .all-reels .reel {
+    width: 100%;
+  }
+  .reel .right {
+    transform: translateX(0%);
+    padding-right: 30px;
+  }
+
+  .right .icon {
+    background: transparent;
+  }
+}
