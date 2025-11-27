@@ -6,9 +6,9 @@ const reelsData = [
     reelTitle: "Top 5 CSS Tricks for 2025",
     isFollwed: false,
     isLiked: false,
-    likeCount: "12.5K",
-    commentCount: "870",
-    shareCount: "3.2K",
+    likeCount: 550,
+    commentCount: 180,
+    shareCount: 110,
     isSaved: true,
   },
   {
@@ -18,9 +18,9 @@ const reelsData = [
     reelTitle: "Minimalist UI Design Principles",
     isFollwed: true,
     isLiked: false,
-    likeCount: "5.1K",
-    commentCount: "122",
-    shareCount: "450",
+    likeCount: 100,
+    commentCount: 122,
+    shareCount: 450,
     isSaved: true,
   },
   {
@@ -30,9 +30,9 @@ const reelsData = [
     reelTitle: "Image Slider Using CSS",
     isFollwed: true,
     isLiked: true,
-    likeCount: "35K",
-    commentCount: "2.1K",
-    shareCount: "1.5K",
+    likeCount: 356,
+    commentCount: 222,
+    shareCount: 115,
     isSaved: true,
   },
   {
@@ -42,9 +42,9 @@ const reelsData = [
     reelTitle: "Content Marketing",
     isFollwed: true,
     isLiked: true,
-    likeCount: "9.9K",
-    commentCount: "505",
-    shareCount: "980",
+    likeCount: 160,
+    commentCount: 505,
+    shareCount: 322,
     isSaved: false,
   },
   {
@@ -54,9 +54,9 @@ const reelsData = [
     reelTitle: "How to Animate your 3D Charachter",
     isFollwed: false,
     isLiked: false,
-    likeCount: "1.2K",
-    commentCount: "55",
-    shareCount: "120",
+    likeCount: 298,
+    commentCount: 417,
+    shareCount: 263,
     isSaved: true,
   },
   {
@@ -66,9 +66,9 @@ const reelsData = [
     reelTitle: "My setup for zero-config web development.",
     isFollwed: true,
     isLiked: true,
-    likeCount: "42.8K",
-    commentCount: "3.5K",
-    shareCount: "7.1K",
+    likeCount: 428,
+    commentCount: 450,
+    shareCount: 360,
     isSaved: false,
   },
   {
@@ -78,9 +78,9 @@ const reelsData = [
     reelTitle: "The future of LLMs in software testing.",
     isFollwed: false,
     isLiked: true,
-    likeCount: "8.4K",
-    commentCount: "1.1K",
-    shareCount: "650",
+    likeCount: 618,
+    commentCount: 687,
+    shareCount: 630,
     isSaved: false,
   },
   {
@@ -90,9 +90,9 @@ const reelsData = [
     reelTitle: "Refactoring giant component into smaller chunks.",
     isFollwed: false,
     isLiked: true,
-    likeCount: "18K",
-    commentCount: "990",
-    shareCount: "2.4K",
+    likeCount: 462,
+    commentCount: 284,
+    shareCount: 156,
     isSaved: true,
   },
   {
@@ -102,9 +102,9 @@ const reelsData = [
     reelTitle: "Preventing XSS attacks in 3 easy steps.",
     isFollwed: true,
     isLiked: false,
-    likeCount: "3.7K",
-    commentCount: "280",
-    shareCount: "390",
+    likeCount: 649,
+    commentCount: 691,
+    shareCount: 459,
     isSaved: false,
   },
   {
@@ -114,19 +114,22 @@ const reelsData = [
     reelTitle: "Building a GraphQL API in under 5 minutes.",
     isFollwed: true,
     isLiked: true,
-    likeCount: "22.3K",
-    commentCount: "1.5K",
-    shareCount: "4.8K",
+    likeCount: 223,
+    commentCount: 297,
+    shareCount: 170,
     isSaved: true,
   },
 ];
 
-let allReels = "";
+let reelContainer = document.querySelector(".all-reels");
 
-reelsData.forEach((reel) => {
-  allReels =
-    allReels +
-    `<div class="reel">
+function addData() {
+  let allReels = "";
+
+  reelsData.forEach((reel, idx) => {
+    allReels =
+      allReels +
+      `<div class="reel">
             <video class="main-video" src=${
               reel.videoUrl
             } muted autoplay loop></video>
@@ -138,13 +141,15 @@ reelsData.forEach((reel) => {
                   alt=""
                 />
                 <h4>${reel.username}</h4>
-                <button>${reel.isFollwed ? "Unfollow" : "Follow"}</button>
+                <button id=${idx} class="followBtn">${
+        reel.isFollwed ? "Unfollow" : "Follow"
+      }</button>
               </div>
               <h3>${reel.reelTitle}</h3>
             </div>
 
             <div class="right">
-              <div class="like">
+              <div id=${idx} class="like">
                 <h4 class="like-icon icon">${
                   reel.isLiked
                     ? '<i class="ri-heart-3-fill liked"></i>'
@@ -152,19 +157,19 @@ reelsData.forEach((reel) => {
                 }</h4>
                 <h6>${reel.likeCount}</h6>
               </div>
-              <div class="comment">
+              <div id=${idx} class="comment">
                 <h4 class="comment-icon icon">
                   <i class="ri-chat-3-line"></i>
                 </h4>
                 <h6>${reel.commentCount}</h6>
               </div>
-              <div class="share">
+              <div id=${idx} class="share">
                 <h4 class="share-icon icon">
                   <i class="ri-share-forward-line"></i>
                 </h4>
                 <h6>${reel.shareCount}</h6>
               </div>
-              <div class="save">
+              <div id=${idx} class="save">
                 <h4 class="save-icon icon">${
                   reel.isSaved
                     ? '<i class="ri-bookmark-fill"></i>'
@@ -176,7 +181,41 @@ reelsData.forEach((reel) => {
               </div>
             </div>
           </div>`;
-});
+  });
 
-let reelContainer = document.querySelector(".all-reels");
-reelContainer.innerHTML = allReels;
+  reelContainer.innerHTML = allReels;
+}
+
+addData();
+
+reelContainer.addEventListener("click", function (evt) {
+  console.log(evt.target.className);
+
+  if (evt.target.className === "like") {
+    if (!reelsData[evt.target.id].isLiked) {
+      reelsData[evt.target.id].likeCount++;
+      reelsData[evt.target.id].isLiked = true;
+      addData();
+    } else {
+      reelsData[evt.target.id].likeCount--;
+      reelsData[evt.target.id].isLiked = false;
+      addData();
+    }
+  } else if (evt.target.className === "followBtn") {
+    if (!reelsData[evt.target.id].isFollwed) {
+      reelsData[evt.target.id].isFollwed = true;
+      addData();
+    } else {
+      reelsData[evt.target.id].isFollwed = false;
+      addData();
+    }
+  } else if (evt.target.className === "save") {
+    if (!reelsData[evt.target.id].isSaved) {
+      reelsData[evt.target.id].isSaved = true;
+      addData();
+    } else {
+      reelsData[evt.target.id].isSaved = false;
+      addData();
+    }
+  }
+});
