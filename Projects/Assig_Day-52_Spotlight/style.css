@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+:root {
+  --x-axis: 0px;
+  --y-axis: 0px;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+
+main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+main button {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  padding: 12px 25px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+}
+
+main button:hover {
+  background-color: red;
+}
+
+.spotlight {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle 150px at var(--x-axis) var(--y-axis),
+    rgba(255, 255, 255, 0),
+    rgba(0, 0, 0, 0.948)
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
