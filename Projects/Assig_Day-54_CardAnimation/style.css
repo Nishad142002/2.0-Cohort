@@ -50,7 +50,8 @@ main .card:hover {
       transparent
     )
     border-box;
-  animation: roatetBorder 2s ease-in-out infinite;
+  animation: roatetBorder 2s;
+  animation-iteration-count: infinite;
 }
 
 .card img {
